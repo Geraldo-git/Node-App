@@ -1,6 +1,0 @@
-npm i -D typescript @types/node ts-node-dev tsconfig-paths
-
-
-//para iniciar o tsconfig
-
-npx tsc --init
