@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import "express-async-errors";
 import cors from "cors";
@@ -26,6 +27,6 @@ app.get("/alunos", (req, res) => {
   ]);
 });
 
-app.listen(3000, () => {
-  console.log("Listen on port 3000...");
+app.listen(process.env.PORT, () => {
+  console.log(`Listen on port ${process.env.PORT}...`);
 });
