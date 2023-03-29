@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { AppError } from "@shared/errors/AppError";
 const routes = Router();
 
 routes.get("/", (req, res) => {
@@ -6,6 +7,7 @@ routes.get("/", (req, res) => {
 });
 
 routes.get("/alunos", (req, res) => {
+  throw new AppError("Acesso negado!");
   res.json([
     {
       aluno: "Bia",
